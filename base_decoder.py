@@ -3,15 +3,22 @@ import sys
 
 def base_to_decimal(digits, base):
     num = 0
+    digits = digits.upper()
     for digit in digits:
-        num = base * num + int(digit)
+        x = digit
+        if x not in '0123456789':
+            x = ord(x) - 65 + 10
+        num = base * num + int(x)
     return num
 
 
 def decimal_to_base(num, base):
     digits = ''
     while num > 0:
-        digits = str(num % base) + digits
+        rem = num % base
+        if rem > 9:
+            rem = chr(rem - 10 + 65)
+        digits = str(rem) + digits
         num  = num // base
     return digits
 
