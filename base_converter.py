@@ -26,7 +26,7 @@ def decimal_to_base(num, base):
 def show_help():
     print()
     print('A utility script to convert numbers in a file between any two bases')
-    print('It will also display the corresponding unicode text for the numbers if the \'--ascii\' flag is given')
+    print('It will also display the corresponding unicode text for the numbers if the \'--unicode\' flag is given')
     print()
     print('Usage:')
     print('\tpython base_decoder.py [options]')
